@@ -1,0 +1,12 @@
+@charset 'utf-8';
+
+@mixin inlineMiddle {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+@mixin ellipsis() {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space:nowrap;
+}
