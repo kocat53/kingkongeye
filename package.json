@@ -21,6 +21,11 @@
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",
     "gulp-imagemin": "^6.0.0",
-    "gulp-sass": "^4.0.2"
-  }
+    "gulp-sass": "^4.0.2",
+    "gulp.spritesmith": "^6.10.1",
+    "vinyl-buffer": "^1.0.1"
+  },
+  "browserslist": [
+	"last 2 versions"
+  ]
 }

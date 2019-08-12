@@ -1,0 +1,482 @@
+@charset "utf-8";
+
+// 지점 및 별점
+.main_info_shop {
+	overflow: hidden;
+	padding: 20px 5px 0px;
+	
+	// 지점
+	.name_item {
+		float: left;
+
+		.text_region {
+			font-size: 13px;
+		}
+
+		.name_shop {
+			font-size: 19px;
+			margin-top: 4px;
+			font-weight: 700;
+			color: #222;
+		}
+	}
+	
+	// 별점 및
+	.info_point {
+		float: right;
+		text-align: right;
+
+		.num_point {
+			display: inline-block;
+			vertical-align: top;
+			font-size: 13px;
+			color: #999;
+
+			&.point_star {
+				&:after {
+					display: block;
+					margin-top: 5px;
+				}
+			}
+		}
+	}
+}
+
+// 하단 비주얼 버튼
+.btn_bottom_visual {
+	position: absolute;
+	bottom: 102px;
+	left: 50px;
+	display: inline-block;
+	padding: 23px 56px 20px;
+	border: 1px solid rgba($color: $point-green, $alpha: 0.5);
+	font-size: 16px;
+	font-weight: 700;
+	color: $point-green;
+	line-height: 1;
+	text-transform: uppercase;
+
+
+	&:hover {
+		background-color: $point-green;
+		border-color: $point-green;
+		color: #fff;
+	}
+}
+
+// 배너 및 공지사항 영역
+.notice_area {
+	display: flex;
+	padding-bottom: 60px;
+}
+
+// 배너
+.banner_notice {
+	flex: 1 0 auto;
+
+	// 배너
+	.footer_banner {
+		float: left;
+		width: 344px;
+	}
+
+	// 트렌드 알아보기
+	.title_footer_banner {
+		float: right;
+		width: 180px;
+		height: 210px;
+		padding: 20px;
+		background-color: $point-green;
+		font-size: 30px;
+		color: #fff;
+		font-weight: 600;
+		line-height: 1.15;
+		box-sizing: border-box;
+		margin-left: 15px;
+
+		&:after {
+			display: inline-block;
+			vertical-align: middle;
+			height: 100%;
+			content: '';
+		}
+		// 텍스트
+		> span {
+			display: inline-block;
+
+			&:after {
+				@include sp_common($common-text_kingkong);
+	
+				display: block;
+				content: '';
+			}
+		}
+	}
+
+	// 배너
+	.footer_banner {
+		display: block;
+		position: relative;
+	}
+
+	.item_footer_banner {
+		&:hover,
+		&:focus {
+			.footer_banner_btn {
+				background-color: #999;
+				color: #fff;
+			}
+		}
+	}
+
+	// VIEW
+	.footer_banner_btn {
+		position: absolute;
+		right: 20px;
+		bottom: 50px;
+		z-index: 2;
+		padding: 7px 35px 6px;
+		border: 1px solid #999;
+		font-size: 15px;
+		color: #999;
+		font-weight: 700;
+	}
+
+	// 페이저
+	.footer_banner_pager  {
+		position: absolute;
+		right: 20px;
+		bottom: 20px;
+		z-index: 3;
+		width: auto;
+		text-align: right;
+
+		.swiper-pagination-bullet  {
+			width: 17px;
+			height: 7px;
+			background-color: #575a62;
+			border-radius: 0;
+			opacity: 1;
+
+			&.swiper-pagination-bullet-active {
+				background-color: $point-green;
+			}
+		}
+	}
+}
+
+//  공지사항
+.notice_wrap {
+	overflow: hidden;
+	flex: 0 1 auto;
+	margin-left: 20px;
+}
+
+// 공지사항 컴포넌트
+.notice_box {
+	float: left;
+	width: 50%;
+	position: relative;
+
+	& + .notice_box {
+		width: 45%;
+		margin-left: 5%;
+	}
+
+	.title_notice {
+		font-size: 26px;
+		color: #262626;
+		font-weight: 700;
+	}
+
+	.btn_basic_more {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+}
+
+// 공지사항 글 목록
+.list_notice {
+	margin-top: 5px;
+
+	> li {
+		line-height: 1.5;
+
+		+li {
+			border-top: 1px dotted #ddd;
+		}
+
+		>a {
+			overflow: hidden;
+			display: block;
+			padding: 7px 0;
+			font-size: 14px;
+			color: #9b9a9a;
+
+			&:hover .text_notice,
+			&:focus .text_notice{
+				color: #555;
+			}
+
+			> div {
+				float: left;
+				width: 65%;
+			}
+
+			&.point_star {
+				&:after {
+					float: right;
+				}
+			}
+		}
+	}
+
+	// 공지 내용
+	.text_notice {
+		@include ellipsis();
+
+		display: inline-block;
+		max-width: 65%;
+		vertical-align: top;
+	}
+
+	.data_notice {
+		float: right;
+
+	}
+}
+
+//  고객지원 및 앱 다운
+.info_store {
+	background-color: #f9f9f9;
+	padding: 45px 0;
+
+	.content_inner {
+		overflow: hidden;
+	}
+
+	.menu_help {
+		float: left;
+		width: 49%;
+
+		& + .menu_help {
+			margin-left: 2%;
+		}
+	}
+
+	// 고객지원
+	.list_help_option {
+		overflow: hidden;
+
+		> li {
+			float: left;
+			width: 50%;
+			text-align: center;;
+
+			> a {
+				display: inline-block;
+				padding-top: 20px;
+
+				&:hover,
+				&:focus {
+					.text_option {
+						color: #222;
+					}
+				}
+			}
+		}
+
+		// 제목
+		.title_option {
+			font-size: 26px;
+			font-weight: 600;
+			color: #222;
+
+			// 꾸밈요소 설정
+			&:before,
+			&:after {
+				display: block;
+				margin: 0 auto;
+				content: '';
+			}
+
+			// 상단 선
+			&:before {
+				width: 34px;
+				height: 2px;
+				margin-bottom: 15px;
+				background-color: #222;
+			}
+
+			// 이미지
+			&:after {
+				@include sp_common_background_img();
+
+				margin-top: 10px;
+			}
+		}
+
+		// 가맹점 이미지
+		.option_shop {
+			.title_option {
+				&:after {
+					@include sp_common_size($common-round_home);
+				}
+			}
+		}
+
+		// 고객만족센터
+		.option_service {
+			.title_option {
+				&:after {
+					@include sp_common_size($common-round_pc);
+				}
+			}
+		}
+
+		// 설명글
+		.text_option {
+			margin-top: 15px;
+			line-height: 1.5;
+		}
+	}
+}
+
+// 실제 footer 정보
+.footer_info {
+	padding: 20px 0 75px;
+	background-color: #333;
+}
+
+// 이용약관 및 회사소개
+.list_footer_use {
+	> li {
+		float: left;
+		position: relative;
+
+		+ li {
+			margin-left: 15px;
+			padding-left: 15px;
+
+			&:before {
+				position: absolute;
+				top: 3px;
+				left: 0;
+				bottom: 3px;
+				width: 1px;
+				background-color: #666;
+				content: '';
+			}
+		}
+
+		> a {
+			font-size: 16px;
+
+			&:hover,
+			&:focus {
+				color: #aaa;
+			}
+		}
+	}
+}
+
+// 전화번호
+.num_tell {
+	margin-top: -4px;
+	font-size: 26px;
+	color: $point-green;
+	font-weight: 600;
+
+	&:before {
+		@include inlineMiddle;
+		@include sp_common($common-ico_tell);
+
+		margin: -3px 8px 0 0;
+		content: '';
+	}
+}
+
+.company_info {
+	margin-top: 10px;
+	padding-top: 20px;
+	border-top: 1px solid #555;
+	position: relative;
+}
+
+// 사이트 정보
+.list_company_info {
+	overflow: hidden;
+
+	> li {
+		float: left;
+		position: relative;
+		font-size: 14px;
+
+		+ li {
+			margin-left: 10px;
+			padding-left: 10px;
+
+			&:before {
+				position: absolute;
+				top: 3px;
+				left: 0;
+				bottom: 3px;
+				width: 1px;
+				background-color: #666;
+				content: '';
+			}
+		}
+
+		&.br_item {
+			padding-left: 0;
+			margin-left: 0;
+			margin-top: 10px;
+			clear: both;
+
+			~ li {
+				margin-top: 10px;
+			}
+
+			&:before {
+				display: none;
+			}
+		}
+	}
+}
+
+// 푸터 광고 버튼
+.info_btn_area {
+	position: absolute;
+	top: 25px;
+	right: 0;
+
+	> a {
+		display: inline-block;
+		min-width: 160px;
+		padding: 10px;
+		font-size: 15px;
+		font-weight: bold;
+		box-sizing: border-box;
+		background-color: #1c1c1c;
+		text-align: center;
+
+		& + a {
+			margin-left: 12px;
+		}
+
+		&.active {
+			background-color: $point-green;
+			color: #fff;
+		}
+	}
+}
+
+address {
+	margin-top: 30px;
+	font-size: 14px;
+
+	> span {
+		color: $point-green;
+	}
+}

@@ -1,0 +1,81 @@
+
+#wrap {
+	min-width: 1350px;
+}
+
+.tc {
+	text-align: center;
+}
+
+// 컨텐츠 기본 영역 설정
+.content_inner {
+	position: relative;
+	width: 1210px;
+	margin: 0 auto;
+}
+
+// 별점
+.point_star {
+	&:after {
+		@include sp_common_background_img();
+		@include sp_common_size($common-star1);
+		@include inlineMiddle();
+
+		content: '';
+	}
+
+	&.point_5 {
+		&:after {
+			@include sp_common_size($common-star5);
+		}
+	}
+
+	&.point_4 {
+		&:after {
+			@include sp_common_size($common-star4);
+		}
+	}
+
+	&.point_3 {
+		&:after {
+			@include sp_common_size($common-star3);
+		}
+	}
+
+	&.point_2 {
+		&:after {
+			@include sp_common_size($common-star2);
+		}
+	}
+}
+
+// 기본 - 더보기 버튼
+.btn_basic_more {
+	position: relative;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background-color: #999;
+	text-align: center;
+
+	&:before,
+	&:after {
+		position: absolute;
+		top: 50%;
+		right: 50%;
+		width: 10px;
+		height: 2px;
+		margin: -1px -5px 0 0;
+		background-color: #fff;
+		content: '';
+	}
+
+	&:after {
+		transform: rotate(90deg);
+	}
+
+	&:hover,
+	&:focus {
+		background-color: #666;
+	}
+}

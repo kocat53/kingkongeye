@@ -34,6 +34,11 @@ ${{spritesheet_info.strings.name}}: ({{spritesheet.px.width}}, {{spritesheet.px.
 	@include spriteBackgroundPositionSupport1x($sprite);
 }
 
+@mixin {{spritesheet_info.strings.name}}_size($sprite) {
+	@include spriteSizeSupport1x($sprite);
+	@include spriteBackgroundPositionSupport1x($sprite);
+}
+
 @mixin {{spritesheet_info.strings.name}}_on($sprite) {
 	@include {{spritesheet_info.strings.name}}_background_img;
 	@include spriteBackgroundPositionSupport1x($sprite);

@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+// how to use : Use following mixins.
+// variable : [X-axis] [Y-axis] [offset_x] [offset_y] [width] [height] [total_width] [total_height] [image_url] [image_name] [folder_name]
+$main-balloon_black: 81px 0px -81px 0px 57px 29px 138px 72px '../img/sp_main.png' 'main-balloon_black' 'sp_main';
+$main-label_best: 0px 0px 0px 0px 71px 72px 138px 72px '../img/sp_main.png' 'main-label_best' 'sp_main';
+
+//ancestor
+$sp_main-width: 138px;
+$sp_main-height: 72px;
+$sp_main-image: '../img/sp_main.png';
+$sp_main-sprites: ($main-balloon_black, $main-label_best, );
+$sp_main_sprites_name: (main-balloon_black, main-label_best, );
+$sp_main: (138px, 72px, '../img/sp_main.png', $sp_main-sprites, );
+
+//mixin
+@mixin sp_main_background_img {
+	background-image: url(../img/sp_main.png);
+}
+
+@mixin sp_main($sprite) {
+	@include sp_main_background_img;
+	@include spriteSizeSupport1x($sprite);
+	@include spriteBackgroundPositionSupport1x($sprite);
+}
+
+@mixin sp_main_size($sprite) {
+	@include spriteSizeSupport1x($sprite);
+	@include spriteBackgroundPositionSupport1x($sprite);
+}
+
+@mixin sp_main_on($sprite) {
+	@include sp_main_background_img;
+	@include spriteBackgroundPositionSupport1x($sprite);
+}

@@ -2,9 +2,12 @@
 <html lang="ko">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="2015년에 작업한 킹콩아이 라는사이트를 포트폴리오 작업을 위하여 다시 제작" />
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>포폴::킹콩아이</title>
-	<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/font-nanum/1.0/nanumbarungothic/nanumbarungothic.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.5/css/swiper.min.css">
 	<link rel="stylesheet" href="css/common.css">
 	<link rel="stylesheet" href="css/main.css">
 </head>
@@ -16,14 +19,696 @@
 	</div>
 	<div id="wrap">
 		<!-- 헤더 -->
-		<header id="header"></header>
+		<header id="header">
+			<div class="header_top content_inner">
+				<h1 class="logo">
+					<a href="#;">
+						<span class="blind">안경전문점 킹콩아이!</span>
+					</a>
+				</h1>
+				<!-- 검색 -->
+				<div class="search_wrap">
+					<strong class="blind">지역 및 가맹점 검색</strong>
+					<span class="title_main_search" aria-hidden="true">검색</span>
+					<div class="input_wrap">
+						<label for="mainSearch" class="blind">검색어 입력하기</label>
+						<input type="text" id="mainSearch" placeholder="지역/가맹점 명으로 검색 가능합니다.">
+						<button class="btn_search">
+							<span class="blind">검색하기</span>
+						</button>
+					</div>
+				</div>
+				<!-- 사용자메뉴 -->
+				<nav class="user_menu">
+					<h2 class="blind">사용자메뉴</h2>
+					<ul class="list_user_meun">
+						<!-- <li><a href="#;"><b>홍길동</b></a></li> -->
+						<li><a href="#">login</a></li>
+						<!-- <li><a href="#">logout</a></li> -->
+						<li><a href="#">joinus</a></li>
+						<li><a href="#">contact us</a></li>
+					</ul>
+					<ul class="list_sns_menu">
+						<li>
+							<a href="#" class="ico_sns ico_fb">
+								<span class="blind">페이스북 공유하기</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="ico_sns ico_blog">
+								<span class="blind">블로그 공유하기</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="ico_sns ico_video">
+								<span class="blind">유튜브 공유하기</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<!-- 주메뉴 -->
+			<nav id="gnb">
+				<h2 class="blind">주메뉴</h2>
+				<div class="content_inner tc">
+					<ul class="list_gnb">
+						<li><a href="#;">가맹점안내</a></li>
+						<li><a href="#;">예약</a></li>
+						<li><a href="#;">커뮤니티</a></li>
+						<li><a href="#;">고객센터</a></li>
+					</ul>
+				</div>
+			</nav>
+			<hr>
+		</header>
+		<!-- 비쥬얼 영역 -->
+		<section class="main_visual tc">
+			<h2 class="blind">이벤트 안내배너 영역</h2>
+			<div class="main_visual_wrap swiper-container ">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide visual_wrap" style="background: #030303;">
+						<div class="content_inner">
+							<a href="#"><img src="img/dist/visual.png" alt="럭셔리브랜드 60%세일"></a>
+						</div>
+					</div>
+					<div class="swiper-slide visual_wrap" style="background: #030303;">
+						<div class="content_inner">
+							<a href="#"><img src="img/dist/visual.png" alt="럭셔리브랜드 60%세일"></a>
+						</div>
+					</div>
+				</div>
+				<div class="main_visual_paging"></div>
+				<button class="btn_main_visual visual_prev">
+					<span class="blind">이전버튼</span>
+				</button>
+				<button class="btn_main_visual visual_next">
+					<span class="blind">다음버튼</span>
+				</button>
+			</div>
+			<hr>
+		</section> 
 		<!-- 본문 -->
-		<main id="container"></main>
+		<main id="container">
+			<h2 class="blind">본문내용 시작</h2>
+			<div class="content_inner">
+				<div class="item_wrap">
+					<div class="shop_wrap">
+						<!-- 제목 -->
+						<div class="shop_title_wrap">
+							<a href="#;" class="title_shop_name">베스트 안경점</a>
+							<span class="sub_desc">가까운 곳의 킹콩아이 가맹점을 확인할수 있습니다.</span>
+						</div>
+						<!-- 내용 -->
+						<strong class="blind">목록</strong>
+						<ul class="list_shop">
+							<li>
+								<a href="#;" class="shop_item_wrap">
+									<div class="img_shop">
+										<img src="img/dist/sample1.png" alt="">
+									</div>
+									<div class="main_info_shop">
+										<dl class="name_item">
+											<dt class="blind">지역</dt>
+											<dd class="text_region">경기</dd>
+											<dt class="blind">지점명</dt>
+											<dd class="name_shop">강남점</dd>
+										</dl>
+										<div class="info_point">
+											<!-- 
+												[D] 별점에 따른 클래스 명
+												5개 = point_5
+												4개 = point_4
+												3개 = point_3
+												2개 = point_2
+												1개 = point_1
+											-->
+											<strong class="num_point point_star">
+												<span class="text_point">평가 (9.5)<span class="blind">점</span></span>
+											</strong>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#;" class="shop_item_wrap">
+									<div class="img_shop">
+										<img src="img/dist/sample2.png" alt="">
+									</div>
+									<div class="main_info_shop">
+										<dl class="name_item">
+											<dt class="blind">지역</dt>
+											<dd class="text_region">경기</dd>
+											<dt class="blind">지점명</dt>
+											<dd class="name_shop">강남점</dd>
+										</dl>
+										<div class="info_point">
+											<!-- 
+												[D] 별점에 따른 클래스 명
+												5개 = point_5
+												4개 = point_4
+												3개 = point_3
+												2개 = point_2
+												1개 = 추가클래스 X
+											-->
+											<strong class="num_point point_star point_5">
+												<span class="text_point">평가 (9.5)<span class="blind">점</span></span>
+											</strong>
+										</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+						<a href="#;" class="btn_basic_more">
+							<span class="blind">더보기</span>
+						</a>
+					</div>
+					<div class="shop_wrap">
+						<!-- 제목 -->
+						<div class="shop_title_wrap">
+							<a href="#;" class="title_shop_name">일이삼사오육칠팔구십</a>
+							<span class="sub_desc">일이삼사오육칠팔구십일이삼사오육칠팔구십</span>
+						</div>
+						<!-- 내용 -->
+						<strong class="blind">목록</strong>
+						<ul class="list_shop">
+							<li>
+								<a href="#;" class="shop_item_wrap labe_best">
+									<div class="img_shop">
+										<img src="img/dist/sample1.png" alt="">
+									</div>
+									<div class="main_info_shop">
+										<dl class="name_item">
+											<dt class="blind">지역</dt>
+											<dd class="text_region">경기</dd>
+											<dt class="blind">지점명</dt>
+											<dd class="name_shop">일이삼사오육칠점</dd>
+										</dl>
+										<div class="info_point">
+											<!-- 
+												[D] 별점에 따른 클래스 명
+												5개 = point_5
+												4개 = point_4
+												3개 = point_3
+												2개 = point_2
+												1개 = point_1
+											-->
+											<strong class="num_point point_star point_2">
+												<span class="text_point">평가 (9.5)<span class="blind">점</span></span>
+											</strong>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#;" class="shop_item_wrap">
+									<div class="img_shop">
+										<img src="img/dist/sample2.png" alt="">
+									</div>
+									<div class="main_info_shop">
+										<dl class="name_item">
+											<dt class="blind">지역</dt>
+											<dd class="text_region">경기</dd>
+											<dt class="blind">지점명</dt>
+											<dd class="name_shop">다섯글자점</dd>
+										</dl>
+										<div class="info_point">
+											<!-- 
+												[D] 별점에 따른 클래스 명
+												5개 = point_5
+												4개 = point_4
+												3개 = point_3
+												2개 = point_2
+												1개 = 추가클래스 X
+											-->
+											<strong class="num_point point_star point_4">
+												<span class="text_point">평가 (9.5)<span class="blind">점</span></span>
+											</strong>
+										</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+						<a href="#;" class="btn_basic_more">
+							<span class="blind">더보기</span>
+						</a>
+					</div>
+				</div>
+				<div class="item_wrap">
+					<div class="shop_wrap">
+						<!-- 제목 -->
+						<div class="shop_title_wrap">
+							<a href="#;" class="title_shop_name">가맹점</a>
+							<span class="sub_desc">가까운 곳의 킹콩아이 가맹점을 확인할수 있습니다.</span>
+						</div>
+						<!-- 내용 -->
+						<strong class="blind">목록</strong>
+						<ul class="list_shop">
+							<li>
+								<a href="#;" class="shop_item_wrap">
+									<div class="img_shop">
+										<img src="img/dist/sample1.png" alt="">
+									</div>
+									<div class="main_info_shop">
+										<dl class="name_item">
+											<dt class="blind">지역</dt>
+											<dd class="text_region">경기</dd>
+											<dt class="blind">지점명</dt>
+											<dd class="name_shop">강남점</dd>
+										</dl>
+										<div class="info_point">
+											<!-- 
+												[D] 별점에 따른 클래스 명
+												5개 = point_5
+												4개 = point_4
+												3개 = point_3
+												2개 = point_2
+												1개 = point_1
+											-->
+											<strong class="num_point point_star">
+												<span class="text_point">평가 (9.5)<span class="blind">점</span></span>
+											</strong>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#;" class="shop_item_wrap">
+									<div class="img_shop">
+										<img src="img/dist/sample2.png" alt="">
+									</div>
+									<div class="main_info_shop">
+										<dl class="name_item">
+											<dt class="blind">지역</dt>
+											<dd class="text_region">경기</dd>
+											<dt class="blind">지점명</dt>
+											<dd class="name_shop">강남점</dd>
+										</dl>
+										<div class="info_point">
+											<!-- 
+												[D] 별점에 따른 클래스 명
+												5개 = point_5
+												4개 = point_4
+												3개 = point_3
+												2개 = point_2
+												1개 = 추가클래스 X
+											-->
+											<strong class="num_point point_star point_5">
+												<span class="text_point">평가 (9.5)<span class="blind">점</span></span>
+											</strong>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#;" class="shop_item_wrap">
+									<div class="img_shop">
+										<img src="img/dist/sample2.png" alt="">
+									</div>
+									<div class="main_info_shop">
+										<dl class="name_item">
+											<dt class="blind">지역</dt>
+											<dd class="text_region">경기</dd>
+											<dt class="blind">지점명</dt>
+											<dd class="name_shop">강남점</dd>
+										</dl>
+										<div class="info_point">
+											<!-- 
+												[D] 별점에 따른 클래스 명
+												5개 = point_5
+												4개 = point_4
+												3개 = point_3
+												2개 = point_2
+												1개 = 추가클래스 X
+											-->
+											<strong class="num_point point_star point_5">
+												<span class="text_point">평가 (9.5)<span class="blind">점</span></span>
+											</strong>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#;" class="shop_item_wrap">
+									<div class="img_shop">
+										<img src="img/dist/sample2.png" alt="">
+									</div>
+									<div class="main_info_shop">
+										<dl class="name_item">
+											<dt class="blind">지역</dt>
+											<dd class="text_region">경기</dd>
+											<dt class="blind">지점명</dt>
+											<dd class="name_shop">강남점</dd>
+										</dl>
+										<div class="info_point">
+											<!-- 
+												[D] 별점에 따른 클래스 명
+												5개 = point_5
+												4개 = point_4
+												3개 = point_3
+												2개 = point_2
+												1개 = 추가클래스 X
+											-->
+											<strong class="num_point point_star point_5">
+												<span class="text_point">평가 (9.5)<span class="blind">점</span></span>
+											</strong>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#;" class="shop_item_wrap">
+									<div class="img_shop">
+										<img src="img/dist/sample2.png" alt="">
+									</div>
+									<div class="main_info_shop">
+										<dl class="name_item">
+											<dt class="blind">지역</dt>
+											<dd class="text_region">경기</dd>
+											<dt class="blind">지점명</dt>
+											<dd class="name_shop">강남점</dd>
+										</dl>
+										<div class="info_point">
+											<!-- 
+												[D] 별점에 따른 클래스 명
+												5개 = point_5
+												4개 = point_4
+												3개 = point_3
+												2개 = point_2
+												1개 = 추가클래스 X
+											-->
+											<strong class="num_point point_star point_5">
+												<span class="text_point">평가 (9.5)<span class="blind">점</span></span>
+											</strong>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#;" class="shop_item_wrap">
+									<div class="img_shop">
+										<img src="img/dist/sample2.png" alt="">
+									</div>
+									<div class="main_info_shop">
+										<dl class="name_item">
+											<dt class="blind">지역</dt>
+											<dd class="text_region">경기</dd>
+											<dt class="blind">지점명</dt>
+											<dd class="name_shop">강남점</dd>
+										</dl>
+										<div class="info_point">
+											<!-- 
+												[D] 별점에 따른 클래스 명
+												5개 = point_5
+												4개 = point_4
+												3개 = point_3
+												2개 = point_2
+												1개 = 추가클래스 X
+											-->
+											<strong class="num_point point_star point_5">
+												<span class="text_point">평가 (9.5)<span class="blind">점</span></span>
+											</strong>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#;" class="shop_item_wrap">
+									<div class="img_shop">
+										<img src="img/dist/sample2.png" alt="">
+									</div>
+									<div class="main_info_shop">
+										<dl class="name_item">
+											<dt class="blind">지역</dt>
+											<dd class="text_region">경기</dd>
+											<dt class="blind">지점명</dt>
+											<dd class="name_shop">강남점</dd>
+										</dl>
+										<div class="info_point">
+											<!-- 
+												[D] 별점에 따른 클래스 명
+												5개 = point_5
+												4개 = point_4
+												3개 = point_3
+												2개 = point_2
+												1개 = 추가클래스 X
+											-->
+											<strong class="num_point point_star point_5">
+												<span class="text_point">평가 (9.5)<span class="blind">점</span></span>
+											</strong>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#;" class="shop_item_wrap">
+									<div class="img_shop">
+										<img src="img/dist/sample2.png" alt="">
+									</div>
+									<div class="main_info_shop">
+										<dl class="name_item">
+											<dt class="blind">지역</dt>
+											<dd class="text_region">경기</dd>
+											<dt class="blind">지점명</dt>
+											<dd class="name_shop">강남점</dd>
+										</dl>
+										<div class="info_point">
+											<!-- 
+												[D] 별점에 따른 클래스 명
+												5개 = point_5
+												4개 = point_4
+												3개 = point_3
+												2개 = point_2
+												1개 = 추가클래스 X
+											-->
+											<strong class="num_point point_star point_5">
+												<span class="text_point">평가 (9.5)<span class="blind">점</span></span>
+											</strong>
+										</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+						<a href="#;" class="btn_basic_more">
+							<span class="blind">더보기</span>
+						</a>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<!-- 메인 하단 비쥬얼 배너 -->
+			<section class="main_bottom_visua tc" style="background-color: #000">
+				<div class="content_inner" style="height:414px;background: url(img/dist/visual2.png)">
+					<strong class="blind">킹콩아이는 합리적인 가격을 추구합니다.</strong>
+					<a href="#;" class="btn_bottom_visual">view detail</a>
+				</div>
+			</section>
+			<hr>
+		</main>
 		<!-- 푸터 -->
-		<footer id="footer"></footer>
+		<footer id="footer">
+			<!-- 공지사항 -->
+			<section class="notice_area content_inner">
+				<h2 class="blind">하단 정보안내 영역</h2>
+				<!-- 배너 -->
+				<section class="banner_notice">
+					<h2 class="title_footer_banner">
+						<span>트렌드<br>알아보기!</span>
+					</h2>
+					<div class="footer_banner swiper-container ">
+						<div class="swiper-wrapper">
+							<a href="#;" class="swiper-slide item_footer_banner">
+								<img src="img/dist/visual3.png" alt="spa 브랜드 일루일에서 착한가격으로 찾아갑니다.">
+								<span aria-hidden="true" class="footer_banner_btn">VIEW</span>
+							</a>
+							<a href="#;" class="swiper-slide item_footer_banner">
+								<img src="img/dist/visual3.png" alt="spa 브랜드 일루일에서 착한가격으로 찾아갑니다.">
+								<span aria-hidden="true" class="footer_banner_btn">VIEW</span>
+							</a>
+						</div>
+						<div class="footer_banner_pager"></div>
+					</div>
+				</section>
+				<!-- 공지 리스트 -->
+				<section class="notice_wrap">
+					<article class="notice_box">
+						<h3 class="title_notice">실시간 고객평가</h3>
+						<ul class="list_notice">
+							<li>
+								<a href="#" class="point_star point_5">
+									<div>
+										<span class="blind">내용</span>
+										<span class="text_notice">친절해서 너무 좋았어요. 친절해서 너무 좋았어요. </span>
+										<span class="blind">작성자 아이디</span>
+										<span class="text_notice_id">(ID : dkny)</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="point_star point_4">
+									<div>
+									<span class="blind">내용</span>
+									<span class="text_notice">친절해서 너무 좋았어요. </span>
+									<span class="blind">작성자 아이디</span>
+									<span class="text_notice_id">(ID : dkny)</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="point_star point_3">
+									<div>
+									<span class="blind">내용</span>
+									<span class="text_notice">친절해서 너무 좋았어요. </span>
+									<span class="blind">작성자 아이디</span>
+									<span class="text_notice_id">(ID : dkny)</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="point_star point_2">
+									<div>
+									<span class="blind">내용</span>
+									<span class="text_notice">친절해서 너무 좋았어요. </span>
+									<span class="blind">작성자 아이디</span>
+									<span class="text_notice_id">(ID : dkny)</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="point_star">
+									<div>
+									<span class="blind">내용</span>
+									<span class="text_notice">친절해서 너무 좋았어요. </span>
+									<span class="blind">작성자 아이디</span>
+									<span class="text_notice_id">(ID : dkny)</span>
+									</div>
+								</a>
+							</li>
+						</ul>
+						<a href="#;" class="btn_basic_more">
+							<span class="blind">더보기</span>
+						</a>
+					</article>
+					<article class="notice_box">
+						<h3 class="title_notice">공지사항</h3>
+						<ul class="list_notice">
+							<li>
+								<a href="#">
+									<span class="blind">내용</span>
+									<span class="text_notice">2015년 새봄맞이 자전거 이벤트 3차2015년 새봄맞이 자전거 이벤트 3차</span>
+									<span class="data_notice">2019. 08. 21</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span class="blind">내용</span>
+									<span class="text_notice">친절해서 너무 좋았어요. </span>
+									<span class="data_notice">2019. 08. 21</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span class="blind">내용</span>
+									<span class="text_notice">친절해서 너무 좋았어요. </span>
+									<span class="data_notice">2019. 08. 21</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span class="blind">내용</span>
+									<span class="text_notice">친절해서 너무 좋았어요. </span>
+									<span class="data_notice">2019. 08. 21</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span class="blind">내용</span>
+									<span class="text_notice">친절해서 너무 좋았어요. </span>
+									<span class="data_notice">2019. 08. 21</span>
+								</a>
+							</li>
+						</ul>
+						<a href="#;" class="btn_basic_more">
+							<span class="blind">더보기</span>
+						</a>
+					</article>
+				</section>
+			</section>
+			<!-- 다운 및 정보 -->
+			<section class="info_store">
+				<h2 class="blind">가맹안내 및 앱 다운로드</h2>
+				<div class="content_inner">
+					<!-- 가맹&고객만족 -->
+					<section class="menu_help">
+						<h3 class="blind">고객지원 안내</h3>
+						<ul class="list_help_option">
+							<li>
+								<a href="#;" class="option_shop">
+									<h4 class="title_option">가맹점 개설안내</h4>
+									<p class="text_option">본사가 운영하는 노하우와 메뉴얼을<br> 바탕으로 창업의 꿈을 실현하자!</p>
+								</a>
+							</li>
+							<li>
+								<a href="#;" class="option_service">
+									<h4 class="title_option">고객만족센터</h4>
+									<p class="text_option">더 좋은  서비스 제공을 위해 고객님들의<br>소중한 의견과 참여를 기다립니다.</p>
+								</a>
+							</li>
+						</ul>
+					</section>
+					<!-- 앱 다운 -->
+					<section class="menu_help">
+						<h3 class="blind">앱 다운로드</h3>
+						<img src="img/dist/img_down.png" alt="킹콩아이 앱을 다운받으세요" usemap="#appDown">
+						<map name="appDown">
+							<area alt="아이폰 앱 다운" title="새창이동" href="#;" coords="0,205,296,278" shape="rect" target="_blank">
+							<area alt="안드로이드 앱 다운" title="새창이동" href="#;" coords="298,205,587,277" shape="rect" target="_blank">
+						</map>
+					</section>
+				</div>
+			</section>
+			<!-- 사이트 정보 -->
+			<section class="footer_info">
+				<h2 class="blind">사이트 정보</h2>
+				<article class="content_inner">
+					<section class="clear">
+						<h3 class="blind">사이트이용약관</h3>
+						<ul class="list_footer_use fl">
+							<li><a href="#;">회사소개 </a></li>
+							<li><a href="#;">이용약관</a></li>
+							<li><a href="#;">인정보취급방침 </a></li>
+							<li><a href="#;">고객센터 </a></li>
+							<li><a href="#;">제휴 광고 문의</a></li>
+						</ul>
+						<div class="fr">
+							<strong class="blind">고객센터 전화번호</strong>
+							<p class="num_tell">1588-1234</p>
+						</div>
+					</section>
+					<section class="company_info">
+						<ul class="list_company_info">
+							<li>킹콩아이</li>
+							<li>대표 : 홍길똥</li>
+							<li>주소 : 서울특별시 포폴구  종상동 92번 포폴빌동 1</li>
+							<li>사업자등록번호 : 123-45-123456</li>
+							<li class="br_item">통신판매업신고번호 : 제 포폴 1호</li>
+							<li>고객센터:1588-1234</li>
+							<li>팩스:02-002-0000</li>
+							<li>Contact : <a href="mailto:test@test.com">test@test.com</a> </li>
+						</ul>
+						<div class="info_btn_area">
+							<a href="#" class="btn_link active">제휴광고문의</a>
+							<a href="#" class="btn_link">상시 설명회</a>
+						</div>
+						<address>Copyright(c) 2016 <span>KINGKONG EYE</span>  CO.LTD., All rights reserved.</address>
+					</section>
+				</article>
+			</section>
+			<hr>
+		</footer>
 	</div>
+	<script src="js/jquery.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.5/js/swiper.min.js"></script>
+	<script src="js/common.js"></script>
+	<script src="js/main.js"></script>
 </body>
-<script src="js/jquery.js"></script>
-<script src="js/common.js"></script>
-<script src="js/main.js"></script>
 </html>

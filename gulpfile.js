@@ -4,6 +4,8 @@ var gulp = require('gulp'),
 	fs = require('fs'),
 	path = require('path'), 
 	imagemin = require('gulp-imagemin'),
+	spritesmith = require('gulp.spritesmith'),
+	buffer = require('vinyl-buffer'),
 	autoprefixer = require('gulp-autoprefixer');
 
 //경로 설정 
@@ -47,7 +49,7 @@ function scss(done) {
 		.pipe(autoprefixer({
 			cascade: false
 		}))
-		.pipe(gulp.dest('src/css',{ sourcemaps: true }));
+		.pipe(gulp.dest('src/css',{ sourcemaps: './' }));
 	done();
 }
 
@@ -77,10 +79,16 @@ function sprite(done) {
 	done();
 }
 
-function imag(done) {
-	gulp.src(['src/img/*.png' , '!src/img/sp_*.png'])
-	.pipe(imagemin())
-	.pipe(gulp.dest('img/dist'))
+function image(done) {
+	gulp.src(['src/img/*.png', '!src/img/sp_*.png'])
+		.pipe(imagemin({
+			optimizationLevel: 1,
+			quality: '50', // When used more then 70 the image wasn't saved
+			speed: 1, // The lowest speed of optimization with the highest quality
+			floyd: 1 // Controls level of dithering (0 = none, 1 = full).
+		}))
+		.pipe(gulp.dest('src/img/dist'));
+	done();
 }
 
 // Watch files
@@ -98,8 +106,10 @@ function watchFiles() {
 }
 
 // task 변수 지정
-const watch = gulp.parallel(watchFiles, broserLive);
+const watch = gulp.parallel(watchFiles,broserLive);
 
 // task 용어 지정
+exports.sprite = sprite;
+exports.img = image;
 exports.sass = scss;
 exports.bs = watch;

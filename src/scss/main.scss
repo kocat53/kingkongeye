@@ -1,0 +1,189 @@
+@charset "UTF-8";
+@import 'common/_var';
+@import 'mixin/mixin';
+@import 'lib/sprite_mixins';
+@import 'lib/sp_common';
+@import 'lib/sp_main';
+
+// 메인 슬라이드
+.main_visual {
+	// 좌우버튼
+	.btn_main_visual {
+		@include sp_common_background_img();
+		
+		position: absolute;
+		top: 50%;
+		z-index: 5;
+		transform: translateY(-50%);
+		
+		&.visual_prev {
+			@include sp_common_size($common-arrow_left);
+
+			left: 50%;
+			margin-left: -850px;
+		}
+
+		&.visual_next {
+			@include sp_common_size($common-arrow_right);
+
+			right: 50%;
+			margin-right: -850px;
+		}
+	}
+
+	// 페이저 버튼
+	.main_visual_paging {
+		position: absolute;
+		bottom: 20px;
+		margin-left: -50px;
+		z-index: 5;
+
+		.swiper-pagination-bullet {
+			width: 16px;
+			height: 16px;
+			background: #ccc !important;
+			opacity: 1;;
+		}
+
+		.swiper-pagination-bullet-active {
+			background: $point-green !important;
+		}
+	}
+}
+
+// 메인 컨텐츠
+#container {
+	margin: 70px 0;
+}
+
+// 공통 - 안경점(반복 컨텐츠)
+.item_wrap {
+	&:after {
+		display: block;
+		clear: both;
+		content: '';
+	}
+
+	& + .item_wrap {
+		margin-top: 45px;
+	}
+
+	&:last-child{
+		padding-bottom: 75px;
+	}
+
+	.shop_wrap {
+		position: relative;
+		float: left;
+
+		+ .shop_wrap {
+			margin-left: 11px;
+		}
+	}
+
+	.btn_basic_more {
+		position: absolute;
+		top: 8px;
+		right: 0;
+	}
+}
+
+// 공통 - 안경점 타이틀
+.shop_title_wrap {
+	margin-bottom: 14px;
+
+	// 타이틀
+	.title_shop_name {
+		font-size: 26px;
+		font-weight: 700;
+		color: #252525;
+	}
+
+	// 부가 설명
+	.sub_desc {
+		display: inline-block;
+		margin-left: 4px;
+		font-size: 15px;
+		color: #999;
+	}
+}
+
+// 공통 - 컨텐츠 정보 목록
+.list_shop {
+	&:after {
+		display: block;
+		clear: both;
+		content: '';
+	}
+
+	> li {
+		float: left;
+
+		+ li {
+			margin-left: 11px;
+		}
+
+		&:nth-child(n+5) {
+			margin-top: 11px;
+		}
+
+		&:nth-child(4n+1) {
+			margin-left: 0;
+		}
+	}
+
+	// 메인 아이템 a링크 영역
+	.shop_item_wrap {
+		position: relative;
+		display: block;
+		width: 294px;
+		padding: 9px 6px 11px;
+		border: 1px solid #eaeaea;
+		background-color: #fff;
+		box-sizing: border-box;
+
+		&.labe_best {
+			&:after {
+				@include sp_main($main-label_best);
+				
+				position: absolute;
+				top: 0;
+				left: 0;
+				content: '';
+			}
+		}
+
+		// 아이템 활성화 설정
+		&:hover,
+		&:focus {
+			background-color: $point-green;
+
+			// 웨이브 이미지 초록색으로 변경
+			.img_shop {
+				&:before {
+					background-image: url(../img/wave_green.png);
+				}
+			}
+
+			.main_info_shop * {
+				color: #fff;
+			}
+		}
+	}
+
+	// 이미지
+	.img_shop {
+		position: relative;
+
+		&:before {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			height: 5px;
+			background: url(../img/wave_white.png) repeat-x;
+			background-position: 18% center ;
+			content: '';
+		}
+	}
+}

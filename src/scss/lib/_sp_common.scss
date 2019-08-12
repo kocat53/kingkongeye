@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+// how to use : Use following mixins.
+// variable : [X-axis] [Y-axis] [offset_x] [offset_y] [width] [height] [total_width] [total_height] [image_url] [image_name] [folder_name]
+$common-arrow_left: 0px 122px 0px -122px 61px 119px 337px 295px '../img/sp_common.png' 'common-arrow_left' 'sp_common';
+$common-arrow_right: 71px 122px -71px -122px 61px 119px 337px 295px '../img/sp_common.png' 'common-arrow_right' 'sp_common';
+$common-ico_blog: 244px 65px -244px -65px 22px 22px 337px 295px '../img/sp_common.png' 'common-ico_blog' 'sp_common';
+$common-ico_fb: 315px 31px -315px -31px 22px 22px 337px 295px '../img/sp_common.png' 'common-ico_fb' 'sp_common';
+$common-ico_home: 303px 65px -303px -65px 15px 13px 337px 295px '../img/sp_common.png' 'common-ico_home' 'sp_common';
+$common-ico_mail: 244px 97px -244px -97px 12px 8px 337px 295px '../img/sp_common.png' 'common-ico_mail' 'sp_common';
+$common-ico_search: 276px 65px -276px -65px 17px 19px 337px 295px '../img/sp_common.png' 'common-ico_search' 'sp_common';
+$common-ico_tell: 244px 31px -244px -31px 29px 24px 337px 295px '../img/sp_common.png' 'common-ico_tell' 'sp_common';
+$common-ico_top: 142px 122px -142px -122px 59px 59px 337px 295px '../img/sp_common.png' 'common-ico_top' 'sp_common';
+$common-ico_youtube: 283px 31px -283px -31px 22px 22px 337px 295px '../img/sp_common.png' 'common-ico_youtube' 'sp_common';
+$common-round_home: 122px 0px -122px 0px 112px 112px 337px 295px '../img/sp_common.png' 'common-round_home' 'sp_common';
+$common-round_pc: 0px 0px 0px 0px 112px 112px 337px 295px '../img/sp_common.png' 'common-round_pc' 'sp_common';
+$common-star1: 0px 251px 0px -251px 102px 17px 337px 295px '../img/sp_common.png' 'common-star1' 'sp_common';
+$common-star2: 0px 278px 0px -278px 102px 17px 337px 295px '../img/sp_common.png' 'common-star2' 'sp_common';
+$common-star3: 112px 278px -112px -278px 102px 17px 337px 295px '../img/sp_common.png' 'common-star3' 'sp_common';
+$common-star4: 224px 251px -224px -251px 102px 17px 337px 295px '../img/sp_common.png' 'common-star4' 'sp_common';
+$common-star5: 112px 251px -112px -251px 102px 17px 337px 295px '../img/sp_common.png' 'common-star5' 'sp_common';
+$common-text_kingkong: 244px 0px -244px 0px 93px 21px 337px 295px '../img/sp_common.png' 'common-text_kingkong' 'sp_common';
+
+//ancestor
+$sp_common-width: 337px;
+$sp_common-height: 295px;
+$sp_common-image: '../img/sp_common.png';
+$sp_common-sprites: ($common-arrow_left, $common-arrow_right, $common-ico_blog, $common-ico_fb, $common-ico_home, $common-ico_mail, $common-ico_search, $common-ico_tell, $common-ico_top, $common-ico_youtube, $common-round_home, $common-round_pc, $common-star1, $common-star2, $common-star3, $common-star4, $common-star5, $common-text_kingkong, );
+$sp_common_sprites_name: (common-arrow_left, common-arrow_right, common-ico_blog, common-ico_fb, common-ico_home, common-ico_mail, common-ico_search, common-ico_tell, common-ico_top, common-ico_youtube, common-round_home, common-round_pc, common-star1, common-star2, common-star3, common-star4, common-star5, common-text_kingkong, );
+$sp_common: (337px, 295px, '../img/sp_common.png', $sp_common-sprites, );
+
+//mixin
+@mixin sp_common_background_img {
+	background-image: url(../img/sp_common.png);
+}
+
+@mixin sp_common($sprite) {
+	@include sp_common_background_img;
+	@include spriteSizeSupport1x($sprite);
+	@include spriteBackgroundPositionSupport1x($sprite);
+}
+
+@mixin sp_common_size($sprite) {
+	@include spriteSizeSupport1x($sprite);
+	@include spriteBackgroundPositionSupport1x($sprite);
+}
+
+@mixin sp_common_on($sprite) {
+	@include sp_common_background_img;
+	@include spriteBackgroundPositionSupport1x($sprite);
+}
